@@ -40,4 +40,22 @@
 // s consists of English letters, digits, symbols and spaces.
 
 var lengthOfLongestSubstring = function(s) {
+  let longestSubstring = 0;
+  for (let x = 0; x < s.length; x++) {
+      for (let y = x; y < s.length; y++) {
+          let sub = s.substring(x, y + 1);
+          let uniqueChar = {};
+          let unique = true;
+          for (let z = 0; z < sub.length; z++) {
+              if (uniqueChar[sub[z]]) {
+                  unique = false;
+              }
+              uniqueChar[sub[z]] = true;
+          }
+          if (unique && sub.length > longestSubstring) {
+              longestSubstring = sub.length;
+          }
+      }
+  }
+  return longestSubstring;
 };
