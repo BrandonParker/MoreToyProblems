@@ -29,3 +29,11 @@
 
 // 0 <= c <= 231 - 1
 
+
+// @param {number} c
+// @return {boolean}
+ 
+ var judgeSquareSum = function(c) {
+ //iterate through combinations
+ //check to see if sum is equal to the input argument
+};
