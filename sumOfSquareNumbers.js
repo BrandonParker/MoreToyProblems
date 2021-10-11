@@ -34,6 +34,10 @@
 // @return {boolean}
  
  var judgeSquareSum = function(c) {
- //iterate through combinations
- //check to see if sum is equal to the input argument
+  for (x = 1; x < c; x++) {
+    for (y = x + 1; y < c; y++) {
+        if ((x ** 2 + y ** 2) === c) return true;
+    }
+}
+return false; 
 };
